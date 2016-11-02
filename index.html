@@ -5,9 +5,17 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 </head>
 <body>
-
+  <!-- ng-controller = directive, StoreController=Controller Name, Store = Alias -->
+  <div ng-controller="StoreController as store">
+    <!-- This will access the store module, and within the
+    StoreController, it will access this.product which equals
+    the gem object, and within the object we will access
+    name, price and description -->
+    <h1> {{store.product.name}} </h1>
+    <h2> {{store.product.price}} </h2>
+    <p> {{store.product.description}} </p>
+  </div>
 	<script type="text/javascript" src="angular.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
-  <p>{{"hello" + " you"}}</p>
 </body>
 </html>
